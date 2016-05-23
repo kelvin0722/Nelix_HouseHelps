@@ -71,7 +71,6 @@ function verifypassword()
                  $('#response').remove();
                  $('#container').append('<p id = "response">' + result + '</p>');
                  $('#loading').fadeOut(1000);
-
                }
 
          });
