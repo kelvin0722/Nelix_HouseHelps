@@ -63,7 +63,6 @@ function verifypassword()
     $('#submit').click(function(){
      $('#container').append('<img src = "img/ajax/ajax-loader.gif" alt="Currently loading" id = "loading" />');
     $.ajax({
-
             url: 'add_member.php',
             type: 'POST',
             data: $('#form1').serialize(),
