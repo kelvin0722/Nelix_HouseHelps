@@ -80,7 +80,6 @@ function verifypassword()
 <div id="maincontainer">
 <div id="container">
 <div id="">
-
 <div>
 
 <br>
@@ -133,7 +132,7 @@ function verifypassword()
 			</div>
 	<div>
 		<input id="Submit" type="submit" name="submit"value="Submit">
-		<button onclick="">Next</button>
+		<button>Next</button>
 		</div>
 		</div>
 		</div> <!-- End of page -->
