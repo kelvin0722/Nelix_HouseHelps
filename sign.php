@@ -10,6 +10,8 @@
 <title>Sign Up</title>
 
 <meta name="author" content="Nelson Anjere" />
+<style>
+</style>
 <script type="text/javascript" src="jquery-1.12.3.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script>
@@ -47,12 +49,41 @@ function verifypassword()
 
  }
 
+ function hide_msg(){
+	 $(document).ready(function (){
+  	$('.msg').hide();
+
+	 });
+ }
+
+ <!-- Ajax code -->
+
+ $(function(){
+
+    $('#submit').click(function(){
+     $('#container').append('<img src = "img/ajax/ajax-loader.gif" alt="Currently loading" id = "loading" />');
+    $.ajax({
+
+            url: 'add_member.php',
+            type: 'POST',
+            data: $('#form1').serialize(),
+            success: function(result){
+                 $('#response').remove();
+                 $('#container').append('<p id = "response">' + result + '</p>');
+                 $('#loading').fadeOut(1000);
+
+               }
+
+         });
+
+    });
+ });
 
 	</script>
 	<link rel="stylesheet" type="text/css" href="final.css">
 
 </head>
-<body>
+<body onload="hide_msg()">
 <div>
 <div style="width:25%;float:right">
 <br><br><br><br><br>
@@ -65,22 +96,17 @@ function verifypassword()
 
 <!-- Begining of form -->
 
-<form method="post" name="f1" action="add_member.php" onSubmit="return verifypassword(this)">
+<form method="post" name="f1" action="add_member.php" id="form1">
 <table width="366" border="0" align="center">
 <div id="logs">
-			<a href="login.php"><b>Login</b></a>
+			<a href="userprofile/login.php"><b>Login</b></a>
 			</div>
-<div id="container">
+
 	<div id="header"><center>
 		<h1><font face="comic sans MS" size="+3" color="#f1f1f1">Register Yourself</font></h1>
 		</center>
 	 <!-- end header -->
-
-<div id="page">
-<div id="maincontainer">
 <div id="container">
-<div id="">
-<div>
 <br>
 <b onmouseover="style.color='green'"onmouseout="style.color='blue'">IDNO: </b>
    <input type="text" name="id" id="myInput" onfocus="focusFunction()" onblur="blurFunction()" required="true">
@@ -103,12 +129,12 @@ function verifypassword()
 <br>
 	<label for="Email Address"><b  onmouseover="style.color='green'"onmouseout="style.color='blue'">Enter Email Address :</b></label>
 
-	<input id="email address" type="text" name="email"><br>
+	<input id="emailadd"   type="email" name="email" required><br>
 
 <br>
 	<div>
 		<label for="Date of Birth"><b onmouseover="style.color='green'"onmouseout="style.color='blue'">Date of Birth :</b></label>
-		<input type="date" name="dob">
+		<input type="date" onfocus="validate_email()" name="dob">
 		<div>
 			<b onmouseover="style.color='green'"onmouseout="style.color='blue'">Gender/Sex :</b>
 			<input type="radio"id="Male"name="gender" value="1">
@@ -130,9 +156,10 @@ function verifypassword()
 			<br>
 			<label id="County"><b onmouseover="style.color='green'"onmouseout="style.color='blue'">County</b></label>
 			<input id="county" type="text"onfocus="myFunction(this)" name="county">
+			<div id="result"></div>
 			</div>
 	<div>
-		<input id="Submit" type="submit" name="submit"value="Submit">
+		<input id="submit" type="button" value="Submit">
 		</div>
 		</div>
 		</div> <!-- End of page -->
@@ -146,5 +173,11 @@ function verifypassword()
 
 </div>
 </body>
+<!--Script to validate email  -->
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script>
+		$('#form1').validate();
+		</script>
 </html>
 <!---PHP VALIDATION -->
