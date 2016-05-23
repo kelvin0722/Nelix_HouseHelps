@@ -81,7 +81,6 @@ function verifypassword()
 <div id="container">
 <div id="">
 <div>
-
 <br>
 <b onmouseover="style.color='green'"onmouseout="style.color='blue'">IDNO: </b>
    <input type="text" name="id" id="myInput" onfocus="focusFunction()" onblur="blurFunction()" required="true">
@@ -90,6 +89,8 @@ function verifypassword()
    <input type="text" name="fname" id="myInput" onfocus="focusFunction()" onblur="blurFunction()" required="true">
 <br><br>
 <b onmouseover="style.color='green'"onmouseout="style.color='blue'">Second Name: </b><input type="text" name="sname" id="myInput" onfocus="focusFunction()" onblur="blurFunction()">
+<br><br>
+<b onmouseover="style.color='green'"onmouseout="style.color='blue'">Username: </b><input type="text" name="sname" id="myInput" onfocus="focusFunction()" onblur="blurFunction()">
 <br><br>
 	<label for="Password"><b onmouseover="style.color='green'"onmouseout="style.color='blue'">Enter Password   :</b></label>
 
