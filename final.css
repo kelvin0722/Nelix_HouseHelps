@@ -1,0 +1,140 @@
+body{
+	font-family: arial,helvetica;
+}
+#container{
+	margin: 0 auto;
+	width: 100%;
+	background-color: #cce5ff
+}
+#boi{
+	background-color: #ffe5e5
+}
+#containers{
+	background-color:rgb(128,128,128);
+	float: center;
+	clear: left;
+}
+#header{
+	background-color: #abacab;
+	padding: 10px;
+}
+#page{
+background-color: tan;
+}
+#log{
+	float: bottom;
+	clear: left;
+	background-color: rgb(128,128,128);
+}
+#sign{
+	float: right;
+}
+#menu1{
+	clear: up;
+	clear: left;
+	display: inline-block;
+	float: left;
+	width: 100%;
+	background-color: #0c0c0c;
+}
+#logs{
+	float: right;
+}
+#tables{
+	float: top;
+	clear: left;
+	background-color: green;
+}
+#deact{
+	float: center;
+	clear: both;
+	background-color:tan; 
+	text-align: center;
+	padding: 10px
+}
+#menu ul li{
+	list-style-type: none;
+	display: inline;
+}
+#menu li a{
+	display: inline;
+	text-decoration: none;
+	border-right: 2px solid #FFFFFF;
+	padding: 3px 10px;
+	float: left;
+	color: #FFFFFF;
+}
+#menu li a:honover{
+	background-color: #CCCCCC;
+}
+#maincontainer{
+	float: left;
+	width: 100%;
+
+}
+#maincontainers{
+	background-color: white;
+}
+#image{
+	float: left;
+	padding:3px 10px;
+	margin: auto;
+	width: "10px";
+	height: 5px;
+}
+#content{
+        float: left;
+	clear: left;
+	width: 65%;
+	padding:20px 0;
+	margin: 0 0 0 5%;
+	display: inline;
+}
+#nel
+{
+	float: right;
+}
+#Fammy
+{
+        float:  right;
+	width: 40%;
+	padding: 1px 0;
+	margin: 0;
+	display: inline;
+	background-color: #abacab;	
+}
+
+
+#bar
+{
+	
+	
+	
+	margin: 0%;
+	display: inline;
+	background-color: #abacab;
+         
+}
+#sidebar{
+	float: right;
+	width: 30%;
+	padding: 1px 0;
+	margin: 0;
+	display: inline;
+	background-color: #CCCCCC;
+}
+#cont{
+	float: right;
+	text-align: both;
+}
+#footer{
+	clear: both;
+	background-color: #CCCCCC;
+	text-align: center;
+	padding: 10px;
+	height: 1%;
+}
+ #table{
+ 	text-align: center;
+ 	float: center;	
+}
