@@ -18,8 +18,9 @@ extract($_POST);
   {
     //create connection
 
-    require_once 'connect.php';
     session_start();
+    require_once 'connect.php';
+
     $username=mysqli_real_escape_string($con,$_POST['uname']);
     $password=mysqli_real_escape_string($con,$_POST['pass']);
     $sql="SELECT *FROM membertbl WHERE username='$username' AND password='$password'";
@@ -33,9 +34,22 @@ extract($_POST);
       header("location:index.php");
     }else{
       $error="Your login name or passwords do not match!!";
+      echo $error;
     }
-
+mysqli_close($con);
   }
+
+  function logout()
+  {
+    session_start();
+
+   if(session_destroy())
+   {
+      header("location: login.php");
+   }
+}
+
+
 
 
 

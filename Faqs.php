@@ -4,7 +4,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="dropdown.css">
 <title>Frequently Asked Questions</title>
-	
+
 <meta name="author" content="Nelson Anjere" />
 <script type="text/javascript" src="jquery-1.12.3.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -16,7 +16,7 @@
 });
 	</script>
 	<link rel="stylesheet" type="text/css" href="final.css">
-	
+
 </head>
 <body>
 
@@ -64,7 +64,7 @@ window.onclick = function(event) {
 </script>
 	 <!-- end header -->
 	<div id="Menu1"><center>
-			
+
 
 <script>
 function mDown(obj) {
@@ -77,9 +77,9 @@ function mUp(obj) {
     obj.innerphp="Thank You";
 }
 </script>
-			
+
 			<p id="k"></p>
-			
+
 			</div>
 			</div>
 <br>
@@ -95,7 +95,7 @@ function mUp(obj) {
 <div>
 	<ol>
 		<p>
-			<li><b>How do i sign up to be a member of this site?</b><br>Signing up is easy and quick.To do so simply <a href="sign.php"onmouseover="style.color='olive'"
+			<li><b>How do i sign up to be a member of this site?</b><br>Signing up is easy and quick.To do so simply <a href="signup.php"onmouseover="style.color='olive'"
                 onmouseout="style.color='blue'"><b>Click here</b></a> to get started with the registration <br>process and start interacting online with other regestered members right a way.</li>
                 <script>
 window.onbeforeunload = function(event) {
@@ -119,8 +119,8 @@ function mouseUp() {
     document.getElementById("myP").style.color = "green";
 }
 </script>
-			
-			
+
+
 		</p>
 	</ol>
 </div>
@@ -143,4 +143,3 @@ function mouseUp() {
 
 </div> <!-- end of footer -->
 </html>
-			

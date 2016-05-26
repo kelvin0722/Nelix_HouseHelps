@@ -33,14 +33,14 @@ HOUSEHELP</h1>
 </center>
 
 <div class="dropdown">
-<button id="myBtn" class="dropbtn">MENU</button> 
+<button id="myBtn" class="dropbtn">MENU</button>
 
 <div id="myDropdown" class="dropdown-content">
   <a href="home.php" onmouseover="style.color='midnightBlue'"onmouseout="style.color='black'">Home</a>
    <a href="about.php"onmouseover="style.color='midnightBlue'" onmouseout="style.color='black'">About Us</a>
      <a href="girls.php" onmouseover="style.color='midnightBlue'"onmouseout="style.color='black'">House Girls</a>
-      <a href="boys.php"onmouseover="style.color='midnightBlue'" onmouseout="style.color='black'">ShambaBoys</a> 
-      <a href="contact us.php" onmouseover="style.color='midnightBlue'"onmouseout="style.color='black'">Contact Us</a> 
+      <a href="boys.php"onmouseover="style.color='midnightBlue'" onmouseout="style.color='black'">ShambaBoys</a>
+      <a href="contact us.php" onmouseover="style.color='midnightBlue'"onmouseout="style.color='black'">Contact Us</a>
       <a href="Faqs.php"onmouseover="style.color='midnightBlue'" onmouseout="style.color='black'">FAQs</a> </div>
 </div>
 <script type="text/javascript">
@@ -148,7 +148,7 @@ onmouseout="style.color='blue'"><b>Download PDF</b></a> </p>
 </div>
 
 <input type="button" value="Hide text"
-onclick="document.getElementById('bar').style.visibility='hidden'"> 
+onclick="document.getElementById('bar').style.visibility='hidden'">
 <input type="button" value="Show text"
 onclick="document.getElementById('bar').style.visibility='visible'"> </div>
 </body>
@@ -163,10 +163,10 @@ Nelson Anjere</p>
 
 <p style="text-align:center;margin-left:auto;margin-right:auto;"><a
 href="home.php" onmouseover="style.color='green'"onmouseout="style.color='blue'"><b>Home|</b></a>
- <a href="about.php"onmouseover="style.color='green'" onmouseout="style.color='blue'"><b>AboutUs|</b></a> 
- <a href="girls.php" onmouseover="style.color='green'"onmouseout="style.color='blue'"><b>House Girls|</b></a> 
- <a href="boys.php"onmouseover="style.color='green'" onmouseout="style.color='blue'"><b>ShambaBoys|</b></a> 
- <a href="contact us.php" onmouseover="style.color='green'"onmouseout="style.color='blue'"><b>Contact Us|</b></a> 
+ <a href="about.php"onmouseover="style.color='green'" onmouseout="style.color='blue'"><b>AboutUs|</b></a>
+ <a href="girls.php" onmouseover="style.color='green'"onmouseout="style.color='blue'"><b>House Girls|</b></a>
+ <a href="boys.php"onmouseover="style.color='green'" onmouseout="style.color='blue'"><b>ShambaBoys|</b></a>
+ <a href="contact us.php" onmouseover="style.color='green'"onmouseout="style.color='blue'"><b>Contact Us|</b></a>
  <a href="faqs.php"onmouseover="style.color='green'"onmouseout="style.color='blue'"><b>FAQ</b></a> </p>
 </div>
 <!-- end of footer -->
