@@ -1,6 +1,7 @@
 <?php
 // Create connection
 $con=mysqli_connect("localhost","root","","househelps");
+
    // Check connection
   if (mysqli_connect_errno())
   {

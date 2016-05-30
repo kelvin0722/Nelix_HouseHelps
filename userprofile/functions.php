@@ -13,6 +13,11 @@ extract($_POST);
       }
       mysqli_close($con);
   }
+  
+  function add_profile_details(){
+    
+    
+  }
 
   function login_member()
   {
