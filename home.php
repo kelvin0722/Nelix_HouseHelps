@@ -17,6 +17,9 @@
     $("#k").hide(1000);
 });
 });
+$(window).scroll(function(){
+  console.log('Your are scrolling a page!');
+});
   </script>
   <link rel="stylesheet" type="text/css" href="final.css">
 </head>
