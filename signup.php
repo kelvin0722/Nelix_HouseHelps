@@ -29,6 +29,9 @@
 	-webkit-border-radius:5px;
 	border:1px solid #459A00
 }
+em{
+	color:blue;
+}
 </style>
 <script type="text/javascript" src="jquery-1.12.3.js"> </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -106,6 +109,9 @@ function verifypassword()
                  $('#response').remove();
                  $('#container').append('<p id = "response">' + result + '</p>');
                  $('#loading').fadeOut(1000);
+				  $('#form1').trigger("reset");
+				 $('#container').append('<em id="success">User Successfully registered!</em>');
+				  $('#success').fadeOut(1000);
 
                }
 
