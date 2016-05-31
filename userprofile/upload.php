@@ -61,6 +61,7 @@ $age=mysqli_escape_string($con,$_POST['age']);
 $town=mysqli_escape_string($con,$_POST['town']);
 $maritalstatus=mysqli_escape_string($con,$_POST['status']);
 $education=mysqli_escape_string($con,$_POST['edu']);
+$admin_phone='0700355166';//admin phone number;
 
 echo $idno."<br>";
 echo $firstname."<br>";
@@ -73,8 +74,8 @@ echo $town."<br>";
 
 
 
-$sql = "INSERT INTO employee_tbl(id,firstname,lastname,age,town,Maritalstatus,Education,imagename)
-    VALUES ('$idno','$firstname','$lastname','$age','$town','$maritalstatus','$education','$file_name')";
+$sql = "INSERT INTO employee_tbl(id,firstname,lastname,age,town,Maritalstatus,Education,imagename,adminphone)
+    VALUES ('$idno','$firstname','$lastname','$age','$town','$maritalstatus','$education','$file_name','$admin_phone')";
     
     
  $result=$con->query($sql);

@@ -465,22 +465,22 @@ session_start();
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="table-responsive">
-                                        <form enctype="multipart/form-data" action="upload.php" method="post">
-                                          <input name="id" type="text" placeholder="IDNO"><br><br>
-                                         <input name="fname" type="text" placeholder="FirstName"><br><br>
-                                         <input name="lname" type="text" placeholder="LastName"><br><br>
-                                         <input name="age" type="text" placeholder="Age"><br><br>
-                                         <select name="town" size="1">
+                                        <form enctype="multipart/form-data" action="upload.php" autocomplete="on" method="post">
+                                          <input name="id" type="text" placeholder="IDNO" required autofocus ><br><br>
+                                         <input name="fname" type="text" placeholder="FirstName" required ><br><br>
+                                         <input name="lname" type="text" placeholder="LastName" required ><br><br>
+                                         <input name="age" type="text" placeholder="Age" required><br><br>
+                                         <select name="town" size="1" required>
                                          <option value="Nairobi">Nairobi</option>
                                            <option value="Kisumu">Kisumu</option>
                                            <option value="Mombasa">Mombasa</option>
                                           <option value="Mandera">Mandera</option>
                                           <option value="Busia">Busia</option>
                                                 </select><br><br>
-                                         <input name="status" type="text" placeholder="Marital Status"><br><br>
-                                         <textarea name="edu" cols="width" rows="height" wrap="type">Enter Educational Background</textarea>
+                                         <input name="status" type="text" placeholder="Marital Status" required><br><br>
+                                         <textarea name="edu" cols="width" rows="height" wrap="type" required>Enter Educational Background</textarea>
                                          <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
-                                          <input name="fileToUpload" type="file" /><br>
+                                          <input name="fileToUpload" type="file" required /><br>
                                            <input type="submit" value="Submit" />
                                      </form>
                                        

@@ -15,10 +15,6 @@
 </head>
 <script>
 
-function login(){
-
-}
-
 
 <!--Ajax Script to load php file -->
 $(function(){
@@ -40,6 +36,9 @@ $(function(){
 
    });
 });
+$.post("login_member.php", {$('#form2').serialize()}, function(data){
+$(".container").append.css("background","yellow").html(data);
+});
 </script>
 
 <body class="body-Login-back">
@@ -55,13 +54,13 @@ $(function(){
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        <form  id="form2" method="post" action="login_member.php">
+                        <form  id="form2" method="post" autocomplete="on" action="login_member.php">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Username" name="uname" type="text" autofocus>
+                                    <input class="form-control" placeholder="Username" name="uname" type="text" required autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="pass" type="password" value="">
+                                    <input class="form-control" placeholder="Password" autocomplete="off" name="pass" required type="password" value="">
                                 </div>
                                 <div class="checkbox">
                                     <label>
