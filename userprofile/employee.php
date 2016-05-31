@@ -289,10 +289,10 @@ session_start();
                         <!--end search section-->
                     </li>
                     <li class="selected">
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                        <a href="admin.php"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Tables<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Tabless<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="member.php">Member Table</a>
@@ -304,7 +304,7 @@ session_start();
                         <!-- second-level-items -->
                     </li>
                      <li>
-                        <a href="timeline.php"><i class="fa fa-flask fa-fw"></i>Timeline</a>
+                        <a href="timeline.html"><i class="fa fa-flask fa-fw"></i>Timeline</a>
                     </li>
                     <li>
                         <a href="tables.html"><i class="fa fa-table fa-fw"></i>Tables</a>
@@ -367,10 +367,10 @@ session_start();
                         <a href="#"><i class="fa fa-files-o fa-fw"></i>Sample Pages<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="blank.html">Blank Page</a>
+                                <a href="#">Blank Page</a>
                             </li>
                             <li>
-                                <a href="login.html">Login Page</a>
+                                <a href="#">Login Page</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
@@ -436,68 +436,10 @@ session_start();
 
 
 
-                    <!--Area chart example -->
-                   <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i>Add User Form
-                            <div class="pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                        Actions
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="#">Action</a>
-                                        </li>
-                                        <li><a href="#">Another action</a>
-                                        </li>
-                                        <li><a href="#">Something else here</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="table-responsive">
-                                        <form enctype="multipart/form-data" action="upload.php" method="post">
-                                          <input name="id" type="text" placeholder="IDNO"><br><br>
-                                         <input name="fname" type="text" placeholder="FirstName"><br><br>
-                                         <input name="lname" type="text" placeholder="LastName"><br><br>
-                                         <input name="age" type="text" placeholder="Age"><br><br>
-                                         <select name="town" size="1">
-                                         <option value="Nairobi">Nairobi</option>
-                                           <option value="Kisumu">Kisumu</option>
-                                           <option value="Mombasa">Mombasa</option>
-                                          <option value="Mandera">Mandera</option>
-                                          <option value="Busia">Busia</option>
-                                                </select><br><br>
-                                         <input name="status" type="text" placeholder="Marital Status"><br><br>
-                                         <textarea name="edu" cols="width" rows="height" wrap="type">Enter Educational Background</textarea>
-                                         <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
-                                          <input name="fileToUpload" type="file" /><br>
-                                           <input type="submit" value="Submit" />
-                                     </form>
-                                       
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!--End area chart example -->
                     <!--Simple table example -->
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i>Simple Table Example
+                            <i class="fa fa-bar-chart-o fa-fw"></i>Employee Table
                             <div class="pull-right">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
@@ -526,44 +468,48 @@ session_start();
                                         <table class="table table-bordered table-hover table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th>#</th>
-                                                    <th>Date</th>
-                                                    <th>Time</th>
-                                                    <th>Amount</th>
+                                                    <th>idno</th>
+                                                    <th>firstname</th>
+                                                    <th>lastname</th>
+                                                    <th>age</th>
+                                                    <th>town</th>
+                                                    <th>maritalstatus</th>
+                                                   
+                                                    
+                                                    
+                                                    
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>3326</td>
-                                                    <td>10/21/2013</td>
-                                                    <td>3:29 PM</td>
-                                                    <td>$321.33</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3325</td>
-                                                    <td>10/21/2013</td>
-                                                    <td>3:20 PM</td>
-                                                    <td>$234.34</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3324</td>
-                                                    <td>10/21/2013</td>
-                                                    <td>3:03 PM</td>
-                                                    <td>$724.17</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3323</td>
-                                                    <td>10/21/2013</td>
-                                                    <td>3:00 PM</td>
-                                                    <td>$23.71</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3322</td>
-                                                    <td>10/21/2013</td>
-                                                    <td>2:49 PM</td>
-                                                    <td>$8345.23</td>
-                                                </tr>
-
+                                                <?php
+                                                require_once 'connect.php';
+                                                
+                                                $sql="SElECT id,firstname,lastname,age,town,maritalstatus
+                                                 FROM employee_tbl ";
+                                                 
+                                                 $result = $con->query($sql);
+                                                 if (!$result) die($con->error);
+                                                 $rows = $result->num_rows;
+                                                 for ($j = 0 ; $j < $rows ; ++$j)
+                                                 {
+                                                   $result->data_seek($j);
+                                                   $row = $result->fetch_array(MYSQLI_ASSOC);
+                                                   echo "<tr>";
+                                                   
+                
+                                                   echo "<td> " . $row['id'] ."</td>";
+                                                   echo "<td> " . $row['firstname'] ."</td>";
+                                                   echo "<td> " . $row['lastname'] ."</td>";
+                                                   echo "<td> " . $row['age'] ."</td>";
+                                                   echo "<td> " . $row['town'] ."</td>";
+                                                   echo "<td> " . $row['maritalstatus'] ."</td>";
+                                                  
+                                                  
+                                                   echo "</tr>";
+                                                         }
+                                                    $result->close();
+                                                     $con->close()
+                                                ?>
 
                                             </tbody>
                                         </table>

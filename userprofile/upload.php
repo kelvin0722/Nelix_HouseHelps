@@ -8,7 +8,7 @@ extract($_POST);
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $file_name=basename($_FILES["fileToUpload"]["name"]);
-echo $file_name;
+echo "<br><em>".$file_name."</em>";
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
@@ -61,20 +61,36 @@ $age=mysqli_escape_string($con,$_POST['age']);
 $town=mysqli_escape_string($con,$_POST['town']);
 $maritalstatus=mysqli_escape_string($con,$_POST['status']);
 $education=mysqli_escape_string($con,$_POST['edu']);
-    $sql = "INSERT INTO employee_tbl(idno,firstname,lastname,age,Town,MaritalStatus,Education,imagename)\n"
-    . " VALUES\n"
-    . " ($idno,$firstname,$lastname,$age,$town,$maritalstatus,$education,$file_name)";
+
+echo $idno."<br>";
+echo $firstname."<br>";
+echo $lastname."<br>";
+echo $education."<br>";
+echo $maritalstatus."<br>";
+echo $town."<br>";
+
+
+
+
+
+$sql = "INSERT INTO employee_tbl(id,firstname,lastname,age,town,Maritalstatus,Education,imagename)
+    VALUES ('$idno','$firstname','$lastname','$age','$town','$maritalstatus','$education','$file_name')";
     
-    $result=$con->query($sql);
     
-    if($result->num_rows > 0){
+ $result=$con->query($sql);
+ if (!$result) die($con->error);
+  $rows = $result->num_rows;
+    if($rows > 0)
+    {
         
         $msg="Successfull";
         
-        header('location:admin.php');
-    }else{
-        $msg="problem with sql";
+        
     }
+    else
+      {
+        header('location:admin.php');
+       }
     
     echo $msg;
 }
