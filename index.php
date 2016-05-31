@@ -1,441 +1,176 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
+<!-- Designed and Compiled by Nelson Anjere. Copyright May 2016 -->
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMIN PAGE</title>
-    <!-- Core CSS - Include with every page -->
-    <link href="assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-    <link href="assets/css/style.css" rel="stylesheet" />
-      <link href="assets/css/main-style.css" rel="stylesheet" />
-     <!-- Page Level CSS -->
-    <link href="assets/plugins/timeline/timeline.css" rel="stylesheet" />
-
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="dropdown.css">
+  <title>NelixHousehelp</title>
+  <meta name="author" content="Nelson Anjere">
+  <script type="text/javascript" src="jquery-1.12.3.js">
+ </script>
+  <script type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+ </script>
+  <script type="text/javascript">
+        $(document).ready(function(){
+    $("button").click(function(){
+    $("#k").hide(1000);
+});
+});
+$(window).scroll(function(){
+  console.log('Your are scrolling a page!');
+});
+  </script>
+  <link rel="stylesheet" type="text/css" href="final.css">
 </head>
 
 <body>
-    <!--  wrapper -->
-    <div id="wrapper">
-        <!-- navbar top -->
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
-            <!-- navbar-header -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo.png" alt="" />
-                </a>
-            </div>
-            <!-- end navbar-header -->
-            <!-- navbar-top-links -->
-            <ul class="nav navbar-top-links navbar-right">
-                <!-- main dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="top-label label label-danger">3</span><i class="fa fa-envelope fa-3x"></i>
-                    </a>
-                    <!-- dropdown-messages -->
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-danger">Andrew Smith</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-info">Jonney Depp</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-success">Jonney Depp</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- end dropdown-messages -->
-                </li>
 
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="top-label label label-success">4</span>  <i class="fa fa-tasks fa-3x"></i>
-                    </a>
-                    <!-- dropdown tasks -->
-                    <ul class="dropdown-menu dropdown-tasks">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 1</strong>
-                                        <span class="pull-right text-muted">40% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                            <span class="sr-only">40% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 2</strong>
-                                        <span class="pull-right text-muted">20% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                            <span class="sr-only">20% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 3</strong>
-                                        <span class="pull-right text-muted">60% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 4</strong>
-                                        <span class="pull-right text-muted">80% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Tasks</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- end dropdown-tasks -->
-                </li>
+<div id="container">
 
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <span class="top-label label label-warning">5</span>  <i class="fa fa-bell fa-3x"></i>
-                    </a>
-                    <!-- dropdown alerts-->
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i>New Comment
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i>3 New Followers
-                                    <span class="pull-right text-muted small">12 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i>Message Sent
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i>New Task
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i>Server Rebooted
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- end dropdown-alerts -->
-                </li>
+<div id="header">
 
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-3x"></i>
-                    </a>
-                    <!-- dropdown user-->
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
-                        </li>
-                    </ul>
-                    <!-- end dropdown-user -->
-                </li>
-                <!-- end main dropdown -->
-            </ul>
-            <!-- end navbar-top-links -->
+<center>
+<h1 onmouseover="style.color='red'" onmouseout="style.color='black'">NELIX
+HOUSEHELP</h1>
+</center>
 
-        </nav>
-        <!-- end navbar top -->
+<div class="dropdown">
+<button id="myBtn" class="dropbtn">MENU</button>
 
-        <!-- navbar side -->
-        <nav class="navbar-default navbar-static-side" role="navigation">
-            <!-- sidebar-collapse -->
-            <div class="sidebar-collapse">
-                <!-- side-menu -->
-                <ul class="nav" id="side-menu">
-                    <li>
-                        <!-- user image section-->
-                        <div class="user-section">
-                            <div class="user-section-inner">
-                                <img src="assets/img/user.jpg" alt="">
-                            </div>
-                            <div class="user-info">
-                                <div><strong><?php require_once 'session.php';echo $login_session?></strong></div>
-                                <div class="user-text-online">
-                                    <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online
-                                </div>
-                            </div>
-                        </div>
-                        <!--end user image section-->
-                    </li>
-                    <li class="sidebar-search">
-                        <!-- search section-->
-                        <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                        <!--end search section-->
-                    </li>
-                    <li class="">
-                        <a href="admin.php"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Tables<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="member.php">Member Table</a>
-                            </li>
-                            <li>
-                                <a href="employee.php">Employee Table</a>
-                            </li>
-                        </ul>
-                        <!-- second-level-items -->
-                    </li>
-                     <li>
-                        <a href="timeline.php" class="selected"><i class="fa fa-flask fa-fw"></i>Timeline</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-table fa-fw"></i>Tables</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-edit fa-fw"></i>Forms</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i>UI Elements<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Panels and Wells</a>
-                            </li>
-                            <li>
-                                <a href="#">Buttons</a>
-                            </li>
-                            <li>
-                                <a href="#">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="#">Typography</a>
-                            </li>
-                            <li>
-                                <a href="#">Grid</a>
-                            </li>
-                        </ul>
-                        <!-- second-level-items -->
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap fa-fw"></i>Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Third Level <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Item</a>
-                                    </li>
-                                </ul>
-                                <!-- third-level-items -->
-                            </li>
-                        </ul>
-                        <!-- second-level-items -->
-                    </li>
-                    <li class="active">
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i>Sample Pages<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li class="">
-                                <a href="#">Blank Page</a>
-                            </li>
-                           
-                        </ul>
-                        <!-- second-level-items -->
-                    </li>
-                </ul>
-                <!-- end side-menu -->
-            </div>
-            <!-- end sidebar-collapse -->
-        </nav>
-        <!-- end navbar side -->
-        <!--  page-wrapper -->
-        <div id="page-wrapper">
+<div id="myDropdown" class="dropdown-content">
+  <a href="home.php" onmouseover="style.color='midnightBlue'"onmouseout="style.color='black'">Home</a>
+   <a href="about.php"onmouseover="style.color='midnightBlue'" onmouseout="style.color='black'">About Us</a>
+     <a href="girls.php" onmouseover="style.color='midnightBlue'"onmouseout="style.color='black'">House Girls</a>
+      <a href="boys.php"onmouseover="style.color='midnightBlue'" onmouseout="style.color='black'">ShambaBoys</a>
+      <a href="contact us.php" onmouseover="style.color='midnightBlue'"onmouseout="style.color='black'">Contact Us</a>
+      <a href="Faqs.php"onmouseover="style.color='midnightBlue'" onmouseout="style.color='black'">FAQs</a> </div>
+</div>
+<script type="text/javascript">
+// Get the button, and when the user clicks on it, execute myFunction
+document.getElementById("myBtn").onclick = function() {myFunction()};
 
-            <div class="row">
-                <!-- Page Header -->
-                <div class="col-lg-12">
-                    <h1 class="page-header">Timeline Page</h1>
-                </div>
-                <!--End Page Header -->
-            </div>
+/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
-               <div class="row">
-                <div class="col-lg-12">
-                    <!--Timeline -->
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <i class="fa fa-clock-o fa-fw"></i>Timeline
-                        </div>
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
 
-                        <div class="panel-body">
-                            <div id="images">
-                            
-                            
-                           <img src="uploads/images4.jpeg" height="200px"  placeholder="clickhere" width="200px" alt="image">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-       
-                           <img src="uploads/images4.jpeg" height="200px" width="200px" alt="image">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                           <img src="uploads/images4.jpeg" height="200px" placeholder="clickhere" width="200px" alt="image">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                            <img src="uploads/images4.jpeg" height="200px" width="200px" alt="image"><br><br>
-                            <img src="uploads/images4.jpeg" height="200px" placeholder="clickhere" width="200px" alt="image">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                            <img src="uploads/images4.jpeg" height="200px" width="200px" alt="image">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                            <img src="uploads/images4.jpeg" height="200px" placeholder="clickhere" width="200px" alt="image">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                            <img src="uploads/images4.jpeg" height="200px" width="200px" alt="image"><br><br>
-                            <img src="uploads/images4.jpeg" height="200px" placeholder="clickhere" width="200px" alt="image">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                            <img src="uploads/images4.jpeg" height="200px" width="200px" alt="image">
-                           
-                           </div>
-                            
-                            
-                            
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}</script>
+<!-- end header -->
 
-                </div>
-        </div>
-        <!-- end page-wrapper -->
+<div id="Menu1">
 
-    </div>
-    </div>
-    </div>
-    <!-- end wrapper -->
+<center>
+<script type="text/javascript">
+function mDown(obj) {
+    obj.style.backgroundColor = "#1ec5e5";
+    obj.innerphp = "Thank You";
+}
 
-    <!-- Core Scripts - Include with every page -->
-    <script src="assets/plugins/jquery-1.10.2.js"></script>
-    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="assets/plugins/pace/pace.js"></script>
-    <script src="assets/scripts/siminta.js"></script>
+function mUp(obj) {
+    obj.style.backgroundColor="#D94A38";
+    obj.innerphp="Thank You";
+}</script>
 
+<p id="k"></p>
+</center>
+</div>
+</div>
+
+<center>
+<h1>Create a safe and a happy home for your kids</h1>
+</center>
+<iframe src="slideshow.html" width="500" height="250">
+</iframe>
+
+
+<div id="Fammy">
+<h2>Families Relating With Domestic Personnel</h2>
+
+<p>Families and domestic employees like house help and<br>
+gardeners, must always make the most of their work and<br>
+personal relationships. It is indeed a unique,if<br>
+not a special relationship. Both parties must gaurd<br>
+it jealously.</p>
+
+<p>The relationship between the domestic worker and
+the<br>
+family members is unlike any other employer/employee<br>
+relationship. If any other line of work most people<br>
+would react to the thought of actually living with <br>
+their bosses or employers under one roof,with either<br>
+horror or laughter.Yet,this is the case,in the <br>
+majority of the situations,when it comes to domestic<br>
+employees.nelixhousehelp tries to make the best for<br>
+both parties. </p>
+</div>
+
+<div id="bar">
+<p>Are you tired of running to the so called house
+girl bureaus and of calling your relactant up-country relatives for house
+girls?</p>
+
+<p>Do you feel tired of wasting your precious time training your house help
+only for them to dissapear shortly after?</p>
+
+<p>Are you tired of having to phone in to work every so often with the same
+reason of your house help not having shown up after their weekend off?</p>
+
+<p>Are you tired of worrying over whether or not your house help will return
+after the weekend off?</p>
+
+<p>Could you be sick and tired of unreliable, unprofessional house girls?</p>
+
+<p>And, are you looking for professional, experianced child-care to look after
+your children and give good care?</p>
+
+<p>Worry no more. At <b>NELIX HOUSEHELP</b>, we have the solution to your
+domestic help problems. </p>
+
+<p>Some Important and Useful Documents Sample work
+Agreement between families and househelp/Shamba Boys. <a href="agreement.pdf"
+onmouseover="style.color='yellowgreen'" onmouseout="style.color='blue'"><b>Download
+PDF</b></a> Sample Baby's Log for the guidance of house girls.<a href="beiby.pdf"
+onmouseover="style.color='yellowgreen'" onmouseout="style.color='blue'"><b>Download
+PDF</b></a> Sample Toddlers Log for the guidance of house girls.<a
+href="daily log.pdf" onmouseover="style.color='yellowgreen'"
+onmouseout="style.color='blue'"><b>Download PDF</b></a> </p>
+</div>
+
+<input type="button" value="Hide text"
+onclick="document.getElementById('bar').style.visibility='hidden'">
+<input type="button" value="Show text"
+onclick="document.getElementById('bar').style.visibility='visible'"> </div>
 </body>
 
+<div id="footer">
+<p style="text-align:center;margin-left:auto;margin-right:auto;"><a
+href="Terms of use.php" onmouseover="style.color='blue'"
+onmouseout="style.color='green'"><b>Terms of use</b></a></p>
+
+<p style="text-align:center;margin-left:auto;margin-right:auto;">Copyright (c)
+Nelson Anjere</p>
+
+<p style="text-align:center;margin-left:auto;margin-right:auto;"><a
+href="home.php" onmouseover="style.color='green'"onmouseout="style.color='blue'"><b>Home|</b></a>
+ <a href="about.php"onmouseover="style.color='green'" onmouseout="style.color='blue'"><b>AboutUs|</b></a>
+ <a href="girls.php" onmouseover="style.color='green'"onmouseout="style.color='blue'"><b>House Girls|</b></a>
+ <a href="boys.php"onmouseover="style.color='green'" onmouseout="style.color='blue'"><b>ShambaBoys|</b></a>
+ <a href="contact us.php" onmouseover="style.color='green'"onmouseout="style.color='blue'"><b>Contact Us|</b></a>
+ <a href="faqs.php"onmouseover="style.color='green'"onmouseout="style.color='blue'"><b>FAQ</b></a> </p>
+</div>
+<!-- end of footer -->
 </html>

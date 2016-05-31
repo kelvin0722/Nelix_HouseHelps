@@ -10,6 +10,7 @@
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href="assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
    <link href="assets/css/style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
       <link href="assets/css/main-style.css" rel="stylesheet" />
 
 </head>
@@ -20,7 +21,7 @@
 $(function(){
 
    $('#login').click(function(){
-    $('.container').append('<img src = "img/ajax/ajax-loader.gif" alt="Currently loading" id = "loading" />');
+    $('#container').append('<img src = "img/ajax/ajax-loader.gif" alt="Currently loading" id = "loading" />');
    $.ajax({
            url: 'login_member.php',
            type: 'POST',
@@ -36,9 +37,7 @@ $(function(){
 
    });
 });
-$.post("login_member.php", {$('#form2').serialize()}, function(data){
-$(".container").append.css("background","yellow").html(data);
-});
+
 </script>
 
 <body class="body-Login-back">
