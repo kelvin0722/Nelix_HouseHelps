@@ -21,14 +21,14 @@
 $(function(){
 
    $('#login').click(function(){
-    $('#container').append('<img src = "img/ajax/ajax-loader.gif" alt="Currently loading" id = "loading" />');
+    $('#form').append('<img src = "img/ajax/ajax-loader.gif" alt="Currently loading" id = "loading" />');
    $.ajax({
            url: 'login_member.php',
            type: 'POST',
            data: $('#form2').serialize(),
            success: function(result){
                 $('#response').remove();
-                $('.container').append('<p id = "response">' + result + '</p>');
+                $('#form').append('<p id = "response">' + result + '</p>');
                 $('#loading').fadeOut(1000);
 
               }
@@ -52,7 +52,7 @@ $(function(){
                     <div class="panel-heading">
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body" id="form">
                         <form  id="form2" method="post" autocomplete="on" action="login_member.php">
                             <fieldset>
                                 <div class="form-group">

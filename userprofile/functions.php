@@ -13,9 +13,9 @@ extract($_POST);
       }
       mysqli_close($con);
   }
-  
+
   function add_profile_details(){
-    
+
     require_once 'connect.php';
     
     $idno=mysqli_real_escape_string($con,$_POST['idno']);
@@ -25,7 +25,7 @@ extract($_POST);
     $town=mysqli_real_escape_string($con,$_POST['town']);
     $maritalstatus=mysqli_real_escape_string($con,$_POST['maritalstatus']);
     $education=mysqli_real_escape_string($con,$_POST['education']);
-    
+
     $sql="INSERT INTO employee_tbl(idno,firstname,lastname,age,Town,MaritalStatus,Education,profpic) VALUES(
      $idno,$firstname,$lastname,$age,$town,$maritalstatus,$education,$profpic )";
      if (!mysqli_query($con,$sql))
@@ -33,8 +33,8 @@ extract($_POST);
       die('Error: ' . mysqli_error($con));
       }
       mysqli_close($con);
-    
-   
+
+
   }
 
   function login_member()
@@ -43,7 +43,7 @@ extract($_POST);
 
     session_start();
     require_once 'connect.php';
-    
+
    $admin='admin';
     $username=mysqli_real_escape_string($con,$_POST['uname']);
     $password=mysqli_real_escape_string($con,$_POST['pass']);
@@ -52,19 +52,19 @@ extract($_POST);
     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 
     $count=mysqli_num_rows($result);
-     
-   
+
+
 
    if($count==1 &&$username==$admin){
       $_SESSION['login_user']=$username;
       header("location:admin.php");
     }
-    
+
     if($count==1 &&$username!==$admin){
       $_SESSION['login_user']=$username;
       header("location:index.php");
     }
-   
+
     else{
       $error="Your login name or passwords do not match!!";
       echo $error;
